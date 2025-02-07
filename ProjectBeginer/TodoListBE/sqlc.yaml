@@ -1,0 +1,15 @@
+version: "2"
+sql:
+    - name: "db"
+      engine: "mysql"
+      queries: "./db/query/"  # thư mục chứa các file SQL queries
+      schema: "./db/migration/"  # thư mục chứa schema migration
+      gen:
+          go:
+              package: "db"  # tên package cho code được generate
+              out: "./db/sqlc"  # thư mục output cho code được generate
+              emit_json_tags: true  # thêm json tags cho struct
+              emit_prepared_queries: false
+              emit_interface: true  # tạo interface cho queries
+              emit_exact_table_names: false
+              emit_empty_slices: true
