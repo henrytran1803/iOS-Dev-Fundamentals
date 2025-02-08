@@ -13,10 +13,15 @@ dropdb:
 	docker exec -it mysql_todolist mysql -uroot -p18032002 -e "DROP DATABASE IF EXISTS todolist;"
 
 migrateup:
-	migrate -path db/migration -database "mysql://root:18032002@tcp(localhost:3000)/todolist?parseTime=true" -verbose up
+	migrate -path db/migration -database "mysql://root:18032002@tcp(localhost:3306)/todolist?parseTime=true" -verbose up
 
 migratedown:
-	migrate -path db/migration -database "mysql://root:18032002@tcp(localhost:3000)/todolist?parseTime=true" -verbose down
+	migrate -path db/migration -database "mysql://root:18032002@tcp(localhost:3306)/todolist?parseTime=true" -verbose down
 sqlc:
 	sqlc generate
+
+docker:
+	docker-compose up --build -d
+docker-down:
+	docker-compose down
 .PHONY: mysql createdb dropdb migrateup migratedown

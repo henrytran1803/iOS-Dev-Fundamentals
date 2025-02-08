@@ -13,6 +13,7 @@ type Querier interface {
 	CreateTodo(ctx context.Context, arg CreateTodoParams) (sql.Result, error)
 	CreateUser(ctx context.Context, arg CreateUserParams) (sql.Result, error)
 	DeleteTodo(ctx context.Context, id int32) error
+	DeleteTodosByUser(ctx context.Context, userID int32) error
 	DeleteUser(ctx context.Context, id int32) error
 	DeleteUserTodos(ctx context.Context, userID int32) error
 	GetTodo(ctx context.Context, id int32) (Todo, error)

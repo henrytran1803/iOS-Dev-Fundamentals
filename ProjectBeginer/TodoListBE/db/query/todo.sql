@@ -49,3 +49,6 @@ WHERE id = ?;
 -- name: DeleteUserTodos :exec
 DELETE FROM todos
 WHERE user_id = ?;
+
+-- name: DeleteTodosByUser :exec
+DELETE FROM todos WHERE user_id = ?;

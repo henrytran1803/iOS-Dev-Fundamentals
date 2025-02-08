@@ -22,7 +22,7 @@ type CreateTodoParams struct {
 	UserID      int32             `json:"user_id"`
 	Title       string            `json:"title"`
 	Description sql.NullString    `json:"description"`
-	Priority    NullTodosPriority `json:"priority"`
+	Priority    string `json:"priority"`
 	Deadline    sql.NullTime      `json:"deadline"`
 }
 
@@ -43,6 +43,15 @@ WHERE id = ?
 
 func (q *Queries) DeleteTodo(ctx context.Context, id int32) error {
 	_, err := q.db.ExecContext(ctx, deleteTodo, id)
+	return err
+}
+
+const deleteTodosByUser = `-- name: DeleteTodosByUser :exec
+DELETE FROM todos WHERE user_id = ?
+`
+
+func (q *Queries) DeleteTodosByUser(ctx context.Context, userID int32) error {
+	_, err := q.db.ExecContext(ctx, deleteTodosByUser, userID)
 	return err
 }
 
