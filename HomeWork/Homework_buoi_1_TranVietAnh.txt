@@ -1,0 +1,57 @@
+import UIKit
+// problem 1
+///Viết một chương trình Swift sử dụng vòng lặp while để in ra dãy Fibonacci cho đến khi giá trị lớn hơn hoặc bằng một số nguyên n đã cho
+func listFibonacci(n: Int) -> [Int] {
+    var result: [Int] = []
+    if n <= 0 { return result }
+    result.append(1)
+    if n == 1 { return result }
+    result.append(1)
+    
+    while true {
+        let next = result[result.count - 1] + result[result.count - 2]
+        if next >= n { break } 
+        result.append(next)
+    }
+    
+    return result
+}
+
+print(listFibonacci(n: 10))
+//problem2
+/// Tạo một mảng số nguyên và tính tổng của tất cả các phần tử trong mảng.
+func sumArray(_ array: [Int]) -> Int {
+    var sum: Int = 0
+    for value in array {
+        sum += value
+    }
+    return sum
+}
+let arr = [1, 2, 3, 4, 5]
+print(sumArray(arr))
+
+//problem3
+///Viết một chương trình để đảo ngược các ký tự của một chuỗi.
+func reverseString(_ input: String) -> String {
+    var reversedString: String = ""
+    for index in (0..<input.count).reversed() {
+        let currentIndex = input.index(input.startIndex, offsetBy: index)
+        reversedString.append(input[currentIndex])
+    }
+    return reversedString
+}
+
+print(reverseString("Hello World"))
+
+//problem3
+///Viết một chương trình sử dụng vòng lặp for để tính tổng tất cả các số chẵn trong một mảng số nguyên.
+func sumEvenNumber(_ array: [Int]) -> Int {
+    var sum: Int = 0
+    for value in array {
+        if value % 2 == 0 {
+            sum += value
+        }
+    }
+    return sum
+}
+print(sumArray(arr))
