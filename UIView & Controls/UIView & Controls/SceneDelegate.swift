@@ -1,24 +1,34 @@
 //
 //  SceneDelegate.swift
-//  TodoListUIKIT
+//  UIView & Controls
 //
-//  Created by henrytran1803 on 2/7/25.
+//  Created by henrytran1803 on 2/17/25.
 //
 
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+
     var window: UIWindow?
-    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        // Tạo window mới với windowScene
         let window = UIWindow(windowScene: windowScene)
-        let viewController = TodoListViewController()
+        
+        // Tạo view controller của bạn
+        let viewController = ViewController()
+        
+        // Có thể wrap trong navigation controller nếu cần
         let navigationController = UINavigationController(rootViewController: viewController)
         
+        // Set root view controller cho window
         window.rootViewController = navigationController
+        
+        // Make window visible
         window.makeKeyAndVisible()
+        
+        // Assign window
         self.window = window
     }
 
