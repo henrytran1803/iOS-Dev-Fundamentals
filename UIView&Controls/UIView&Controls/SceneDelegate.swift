@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  UIView & Controls
+//  UIView&Controls
 //
-//  Created by henrytran1803 on 2/17/25.
+//  Created by henry tran on 18/02/2025.
 //
 
 import UIKit
@@ -10,26 +10,13 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+
+
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        
-        // Tạo window mới với windowScene
-        let window = UIWindow(windowScene: windowScene)
-        
-        // Tạo view controller của bạn
-        let viewController = ViewController()
-        
-        // Có thể wrap trong navigation controller nếu cần
-        let navigationController = UINavigationController(rootViewController: viewController)
-        
-        // Set root view controller cho window
-        window.rootViewController = navigationController
-        
-        // Make window visible
-        window.makeKeyAndVisible()
-        
-        // Assign window
-        self.window = window
+        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
+        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        guard let _ = (scene as? UIWindowScene) else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
