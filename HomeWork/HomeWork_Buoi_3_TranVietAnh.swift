@@ -1,44 +1,4 @@
-import Foundation
-
-class BankAccount {
-    var balance: Double {
-        didSet {
-            print("New balance: \(balance)")
-        }
-    }
-    var owner: String
-    
-    init(owner: String, balance: Double = 0) {
-        self.owner = owner
-        self.balance = balance
-        
-    }
-    
-    var isRich: Bool {
-        return balance > 1_000_000
-    }
-    func addBalance(_ amount: Double) {
-        guard amount > 0 else {
-            return
-        }
-        balance += amount
-    }
-    func withdraw(_ amount: Double) {
-        guard amount > 0, balance >= amount else {
-            return
-        }
-        balance -= amount
-    }
-    
-}
-var owner1 = "Phạm Minh Huy"
-var account1 = BankAccount(owner: owner1)
-account1.addBalance(100000)
-account1.addBalance(50000)
-account1.addBalance(-50000)
-account1.withdraw(20000)
-print("Is \(owner1) rich? : \(account1.isRich)")
-
+// question 2 product
 
 struct Product {
     var name: String
@@ -104,50 +64,8 @@ productManager.infoProduct()
 productManager.exportProduct("Iphone 13", 50)
 productManager.checkStock()
 
-struct Circle {
-    private var pi: Double = 3.14
-    var radius: Double {
-        didSet {
-            print("New radius is \(radius), new area \(String(format: "%.2f", area)), new circumference \(String(format: "%.2f", circumference))")
-        }
-    }
-    
-    init(radius: Double) {
-        self.radius = radius
-    }
-    var diameter: Double {
-        return radius * 2
-    }
-    var area: Double {
-        return .pi * radius * radius
-    }
-    var circumference: Double {
-        return 2 * .pi * radius
-    }
-}
-var circles: [Circle] = []
-circles.append(Circle(radius: 5))
-circles[0].radius = 10
-circles.append(Circle(radius: 10))
-circles.append(Circle(radius: 15))
-circles[1].radius = 10
-circles[2].radius = 10
-//
-//Bài 3: Quản lý Điểm Học Sinh
-//Tạo một class Student để quản lý điểm số học sinh với các yêu cầu sau:
-//
-//Thuộc tính:
-//name: Tên học sinh (kiểu String).
-//mathScore, englishScore, scienceScore: Điểm từng môn (kiểu Double).
-//Computed property:
-//averageScore: Điểm trung bình của ba môn.
-//Observer property:
-//Khi bất kỳ điểm môn học nào thay đổi, in ra: "Điểm trung bình mới của học sinh X là Y.".
-//
-//Yêu cầu:
-//
-//Tạo danh sách học sinh.
-//Thêm và cập nhật điểm, kiểm tra kết quả.
+
+// question 3 student
 
 class Student {
     var name: String
@@ -210,3 +128,34 @@ studentManager.addStudent(Student(name: "Minh", mathScore: 5, englishScore: 6, s
 studentManager.updateStudent(name: "Huy", mathScore: 9, englishScore: 8, scienceScore: 9)
 
 studentManager.infoAllStudent()
+
+// question 5 circle
+struct Circle {
+    private var pi: Double = 3.14
+    var radius: Double {
+        didSet {
+            print("New radius is \(radius), new area \(String(format: "%.2f", area)), new circumference \(String(format: "%.2f", circumference))")
+        }
+    }
+    
+    init(radius: Double) {
+        self.radius = radius
+    }
+    var diameter: Double {
+        return radius * 2
+    }
+    var area: Double {
+        return .pi * radius * radius
+    }
+    var circumference: Double {
+        return 2 * .pi * radius
+    }
+}
+var circles: [Circle] = []
+circles.append(Circle(radius: 5))
+circles[0].radius = 10
+circles.append(Circle(radius: 10))
+circles.append(Circle(radius: 15))
+circles[1].radius = 10
+circles[2].radius = 10
+

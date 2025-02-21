@@ -1,5 +1,5 @@
 //
-//  NavigationViewController.swift
+//  CollectionViewController.swift
 //  UIView&Controls
 //
 //  Created by henrytran1803 on 2/21/25.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NavigationViewController: UIViewController {
+class CollectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,13 +8,50 @@
 import UIKit
 
 class NavigationViewController: UIViewController {
-
+    var  button :UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Push", for: .normal)
+        button.addTarget(self, action: #selector(push), for: .touchUpInside)
+        button.backgroundColor = .systemBlue
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    var buttonLabel : UIButton = {
+        let buttonLabel = UIButton(type: .system)
+        buttonLabel.setTitle("Push Label", for: .normal)
+        buttonLabel.addTarget(self, action: #selector(goToLabel), for: .touchUpInside)
+        buttonLabel.backgroundColor = .systemBlue
+        buttonLabel.translatesAutoresizingMaskIntoConstraints = false
+        return buttonLabel
+    }()
+    @objc func goToLabel(){
+        let vc = ScrollViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    @objc func push(){
+        let vc = ZoomableViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Its Navigation"
         // Do any additional setup after loading the view.
+        setUpUI()
     }
-    
+    func setUpUI(){
+        view.addSubview(buttonLabel)
+        view.addSubview(button)
+        setUpContrain()
+    }
+    func setUpContrain(){
+        NSLayoutConstraint.activate([
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            buttonLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            buttonLabel.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20),
+        ])
+    }
 
     /*
     // MARK: - Navigation
