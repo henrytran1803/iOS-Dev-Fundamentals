@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  TdoListUikitApp
+//  TodoListUIkitApp
 //
-//  Created by henrytran1803 on 2/22/25.
+//  Created by henry tran on 22/02/2025.
 //
 
 import UIKit
