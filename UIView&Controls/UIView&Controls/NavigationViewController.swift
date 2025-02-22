@@ -26,11 +26,11 @@ class NavigationViewController: UIViewController {
         return buttonLabel
     }()
     @objc func goToLabel(){
-        let vc = ScrollViewController()
+        let vc = AlertViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     @objc func push(){
-        let vc = ZoomableViewController()
+        let vc = WebAdvanceViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     override func viewDidLoad() {

@@ -19,6 +19,11 @@
 		1EAC5D5B2D680EFF006E797C /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC5D5A2D680EFF006E797C /* StackViewController.swift */; };
 		1EAC5D5D2D681051006E797C /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC5D5C2D681051006E797C /* ScrollViewController.swift */; };
 		1EAC5D5F2D681072006E797C /* ZoomableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC5D5E2D681072006E797C /* ZoomableViewController.swift */; };
+		1EAC5D842D68D25F006E797C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC5D832D68D25F006E797C /* CollectionViewController.swift */; };
+		1EAC5D862D68D38E006E797C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC5D852D68D38E006E797C /* WebViewController.swift */; };
+		1EAC5D882D68D3DA006E797C /* WebAdvanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC5D872D68D3DA006E797C /* WebAdvanceViewController.swift */; };
+		1EAC5D8A2D68D439006E797C /* WebAdvanceActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC5D892D68D439006E797C /* WebAdvanceActionViewController.swift */; };
+		1EAC5D8C2D68D4A6006E797C /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC5D8B2D68D4A6006E797C /* AlertViewController.swift */; };
 		D5ED65ED2D64399100F3EA31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED65EC2D64399100F3EA31 /* AppDelegate.swift */; };
 		D5ED65EF2D64399100F3EA31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED65EE2D64399100F3EA31 /* SceneDelegate.swift */; };
 		D5ED65F62D64399200F3EA31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5ED65F52D64399200F3EA31 /* Assets.xcassets */; };
@@ -38,6 +43,11 @@
 		1EAC5D5A2D680EFF006E797C /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		1EAC5D5C2D681051006E797C /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		1EAC5D5E2D681072006E797C /* ZoomableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableViewController.swift; sourceTree = "<group>"; };
+		1EAC5D832D68D25F006E797C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		1EAC5D852D68D38E006E797C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		1EAC5D872D68D3DA006E797C /* WebAdvanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAdvanceViewController.swift; sourceTree = "<group>"; };
+		1EAC5D892D68D439006E797C /* WebAdvanceActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAdvanceActionViewController.swift; sourceTree = "<group>"; };
+		1EAC5D8B2D68D4A6006E797C /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		D5ED65E92D64399100F3EA31 /* UIView&Controls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIView&Controls.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5ED65EC2D64399100F3EA31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5ED65EE2D64399100F3EA31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,12 +97,17 @@
 				D5ED65F72D64399200F3EA31 /* LaunchScreen.storyboard */,
 				D5ED65FA2D64399200F3EA31 /* Info.plist */,
 				1EAC5D502D68045B006E797C /* NavigationViewController.swift */,
+				1EAC5D8B2D68D4A6006E797C /* AlertViewController.swift */,
+				1EAC5D872D68D3DA006E797C /* WebAdvanceViewController.swift */,
+				1EAC5D892D68D439006E797C /* WebAdvanceActionViewController.swift */,
 				1EAC5D522D680484006E797C /* SecondVViewController.swift */,
 				1EAC5D562D680814006E797C /* LabelViewController.swift */,
 				1EAC5D582D680CD5006E797C /* ImageViewController.swift */,
 				1EAC5D5A2D680EFF006E797C /* StackViewController.swift */,
 				1EAC5D5C2D681051006E797C /* ScrollViewController.swift */,
 				1EAC5D5E2D681072006E797C /* ZoomableViewController.swift */,
+				1EAC5D832D68D25F006E797C /* CollectionViewController.swift */,
+				1EAC5D852D68D38E006E797C /* WebViewController.swift */,
 			);
 			path = "UIView&Controls";
 			sourceTree = "<group>";
@@ -169,18 +184,23 @@
 			files = (
 				1EAC5D512D68045B006E797C /* NavigationViewController.swift in Sources */,
 				1EAC5D572D680814006E797C /* LabelViewController.swift in Sources */,
+				1EAC5D8A2D68D439006E797C /* WebAdvanceActionViewController.swift in Sources */,
 				1EAC5D532D680484006E797C /* SecondVViewController.swift in Sources */,
+				1EAC5D8C2D68D4A6006E797C /* AlertViewController.swift in Sources */,
 				1E5A09C72D662C1B000AFB1E /* MainTabViewController.swift in Sources */,
 				1E126D502D6775210013BF20 /* ControlAndActionView.swift in Sources */,
 				1E5A09C52D661C8A000AFB1E /* InputControlView.swift in Sources */,
 				D5ED65ED2D64399100F3EA31 /* AppDelegate.swift in Sources */,
 				1EAC5D5D2D681051006E797C /* ScrollViewController.swift in Sources */,
 				D5ED65EF2D64399100F3EA31 /* SceneDelegate.swift in Sources */,
+				1EAC5D882D68D3DA006E797C /* WebAdvanceViewController.swift in Sources */,
+				1EAC5D842D68D25F006E797C /* CollectionViewController.swift in Sources */,
 				1E5A09CB2D662C34000AFB1E /* SettingViewController.swift in Sources */,
 				1EAC5D5B2D680EFF006E797C /* StackViewController.swift in Sources */,
 				1EAC5D592D680CD5006E797C /* ImageViewController.swift in Sources */,
 				1E5A09C92D662C2B000AFB1E /* HomeViewController.swift in Sources */,
 				1EAC5D5F2D681072006E797C /* ZoomableViewController.swift in Sources */,
+				1EAC5D862D68D38E006E797C /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

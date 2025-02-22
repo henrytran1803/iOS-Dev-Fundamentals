@@ -8,22 +8,36 @@
 import UIKit
 
 class AlertViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        
+        let button = UIButton(type: .system)
+        button.setTitle("Show Alert", for: .normal)
+        button.addTarget(self, action: #selector(showAlert), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(button)
+        
+        NSLayoutConstraint.activate([
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func showAlert() {
+        let alert = UIAlertController(title: "Thông báo", message: "Bạn có muốn tiếp tục không?", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Hủy", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            print("Người dùng đã bấm OK")
+        }
+        
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
     }
-    */
-
 }
+
