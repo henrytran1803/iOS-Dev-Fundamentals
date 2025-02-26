@@ -19,7 +19,7 @@ class ProductManager {
     var products: [Product]
     init(products: [Product]) {
         self.products = products
-    }
+ }
    
     func importProduct(_ name: String, _ amount: Int){
         guard amount <= 0 else { return}
