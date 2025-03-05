@@ -1,0 +1,21 @@
+Bài Tập 2: Quản Lý Tin Nhắn
+Mô tả: Tạo một class MessageSender có khả năng gửi tin nhắn và thông báo cho delegate khi tin nhắn đã được gửi thành công hoặc thất bại.
+
+Yêu cầu:
+
+Tạo protocol MessageSenderDelegate với các phương thức:
+messageDidSend()
+messageDidFailWithError(error: Error)
+Tạo class MessageSender với thuộc tính delegate và phương thức gửi tin nhắn.
+Tạo một class khác (ví dụ: MessageObserver) để thực hiện protocol và xử lý các thông báo.
+
+Bài Tập 3: Xử Lý Tình Huống
+Mô tả: Tạo một class SituationHandler có nhiệm vụ xử lý các tình huống trong game và thông báo cho delegate khi một tình huống xảy ra.
+
+Yêu cầu:
+
+Tạo protocol SituationHandlerDelegate với các phương thức:
+situationDidOccur(type: String)
+situationDidEnd(type: String)
+Tạo class SituationHandler với thuộc tính delegate và phương thức xử lý tình huống.
+Tạo một class khác (ví dụ: GameObserver) để thực hiện protocol và xử lý thông báo.
