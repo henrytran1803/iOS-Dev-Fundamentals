@@ -1,4 +1,4 @@
-import foundation
+import Foundation
 //ex1
 func sum<T: Numeric>(_ numbers: [T]) -> T {
     return numbers.isEmpty ? 0 : numbers.reduce(0, +)
