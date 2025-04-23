@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="NoficationCenterLearn" customModuleProvider="target">
+            <connections>
+                <outlet property="nameLabel" destination="Uev-QM-ZLO" id="Otg-0V-LdK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uev-QM-ZLO">
+                    <rect key="frame" x="10" y="138" width="373" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i51-aw-tPr">
+                    <rect key="frame" x="10" y="272" width="373" height="39"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="GET"/>
+                    <connections>
+                        <action selector="didTapSend:" destination="-1" eventType="touchUpInside" id="ZOg-1y-8Lc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tg5-X9-gIf">
+                    <rect key="frame" x="40" y="411" width="313" height="39"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Go view 2"/>
+                    <connections>
+                        <action selector="tabGoToView2:" destination="-1" eventType="touchUpInside" id="DpE-7h-6kR"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemMintColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="i51-aw-tPr" secondAttribute="trailing" constant="10" id="9lL-mt-v1t"/>
+                <constraint firstItem="Uev-QM-ZLO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="DIt-ZE-mMO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Tg5-X9-gIf" secondAttribute="trailing" constant="40" id="JIO-4B-3zu"/>
+                <constraint firstItem="i51-aw-tPr" firstAttribute="top" secondItem="Uev-QM-ZLO" secondAttribute="bottom" constant="100" id="JgS-X4-Pg1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Uev-QM-ZLO" secondAttribute="trailing" constant="10" id="kAp-oy-ovn"/>
+                <constraint firstItem="Uev-QM-ZLO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="l5B-S5-cME"/>
+                <constraint firstItem="i51-aw-tPr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="skJ-bU-wxc"/>
+                <constraint firstItem="Tg5-X9-gIf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="wGU-8F-89X"/>
+                <constraint firstItem="Tg5-X9-gIf" firstAttribute="top" secondItem="i51-aw-tPr" secondAttribute="bottom" constant="100" id="xWu-Up-bmh"/>
+            </constraints>
+            <point key="canvasLocation" x="-68" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
