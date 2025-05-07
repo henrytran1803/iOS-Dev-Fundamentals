@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D57DBF2A2DBB30F60014B106 /* simulator_screenshot_841BA6B5-5A57-440B-8A65-69C96D3E8CAD.png in Resources */ = {isa = PBXBuildFile; fileRef = D57DBF292DBB30F60014B106 /* simulator_screenshot_841BA6B5-5A57-440B-8A65-69C96D3E8CAD.png */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		D579102C2DB91B2C005C14E7 /* HomeWork_Buoi11_TranVietAnh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWork_Buoi11_TranVietAnh.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D57DBF292DBB30F60014B106 /* simulator_screenshot_841BA6B5-5A57-440B-8A65-69C96D3E8CAD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "simulator_screenshot_841BA6B5-5A57-440B-8A65-69C96D3E8CAD.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -45,6 +50,7 @@
 		D57910232DB91B2C005C14E7 = {
 			isa = PBXGroup;
 			children = (
+				D57DBF292DBB30F60014B106 /* simulator_screenshot_841BA6B5-5A57-440B-8A65-69C96D3E8CAD.png */,
 				D579102E2DB91B2C005C14E7 /* HomeWork_Buoi11_TranVietAnh */,
 				D579102D2DB91B2C005C14E7 /* Products */,
 			);
@@ -122,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D57DBF2A2DBB30F60014B106 /* simulator_screenshot_841BA6B5-5A57-440B-8A65-69C96D3E8CAD.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
