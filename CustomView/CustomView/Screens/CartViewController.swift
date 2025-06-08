@@ -11,6 +11,17 @@ class CartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let searchBar = CustomSearchBar()
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(searchBar)
+
+        // AutoLayout (ví dụ đặt top dưới Navigation Bar)
+        NSLayoutConstraint.activate([
+            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            searchBar.heightAnchor.constraint(equalToConstant: 50)
+        ])
 
         // Do any additional setup after loading the view.
     }
